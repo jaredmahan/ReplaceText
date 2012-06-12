@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace ReplaceText
 {
-    class Program
+    public class Propgram
     {
+        public void Program()
+        {
+        }
         protected enum ReplaceMode{
             ToGeneric,
             FromGeneric
         }
-        static void Main(string[] args)
+
+        [STAThreadAttribute]
+        public static void Main()
         {
-            Console.WriteLine("***********************************************************");
-            Console.WriteLine("Title: Replace Text Program");
-            Console.WriteLine("Author: Jared Mahan");
-            Console.WriteLine("Description: Copies and Replaces text based on input");
-            Console.WriteLine("added to dictionaries found in the code below.");
-            Console.WriteLine("***********************************************************");
-            ReplaceText();
-            Console.WriteLine("Please press any key to exit...");
-            Console.ReadKey();
+            Application.EnableVisualStyles();
+            
+            Application.Run(new ReplaceText());
         }
-        static void ReplaceText()
+        public static void ReplaceText()
         {
             // Change this flag to go to and from generics
             ReplaceMode rm = ReplaceMode.FromGeneric;
