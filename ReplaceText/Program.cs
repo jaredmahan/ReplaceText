@@ -35,8 +35,8 @@ namespace ReplaceText
             new FileInfo(targetPath).Directory.Create();
 
             Dictionary<string, string> rd = new Dictionary<string, string>();
-            rd.Add(rm == ReplaceMode.FromGeneric ? "Pattern" : "PatternText", "ReplaceText");
-            rd.Add(rm == ReplaceMode.FromGeneric ? "Pattern" : "PatternText", "ReplaceText");
+            rd.Add(rm == ReplaceMode.FromGeneric ? "Pattern1" : "PatternSourceText1", "ReplaceText1");
+            rd.Add(rm == ReplaceMode.FromGeneric ? "Pattern2" : "PatternSourceText2", "ReplaceText2");
             
             Console.WriteLine(string.Empty);
             Console.WriteLine(String.Format("Source Path: {0}", sourcePath));
